@@ -18,7 +18,7 @@ namespace WebApplication.Controllers
             _logger = logger;
         }
 
-        public ActionResult test()
+        public ActionResult Test()
         {
             ViewBag.Message = "test";
             return View();
@@ -51,12 +51,6 @@ namespace WebApplication.Controllers
         {
 
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new UserViewModel { UserID = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

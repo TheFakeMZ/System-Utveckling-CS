@@ -1,12 +1,12 @@
 ﻿@model WebApplication.Models.UserViewModel
 
 @{
-    ViewData["Title"] = "Create a new profile";
+    ViewData["Title"] = "Register Profile";
 }
 
 <h1>Register a new</h1>
 
-<h1> <b>User<b></h1>
+<h1> <b> User</b></h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -28,9 +28,9 @@
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EmailAddress" class="control-label"></label>
-                <input asp-for="EmailAddress" class="form-control" />
-                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ConfirmEmail" class="control-label"></label>
