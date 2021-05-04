@@ -18,6 +18,30 @@ namespace WebApplication.Controllers
             _logger = logger;
         }
 
+        public ActionResult test()
+        {
+            ViewBag.Message = "test";
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            ViewBag.Message = "User Login page";
+            return View();
+        }
+
+        public ActionResult Register()
+        {
+            ViewBag.Message = "User Sign Up"; 
+            return View();
+        }
+
+        public ActionResult Scoreboard()
+        {
+            ViewBag.Message = "View the final score";
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -25,13 +49,14 @@ namespace WebApplication.Controllers
 
         public IActionResult Privacy()
         {
+
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new UserViewModel { UserID = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
