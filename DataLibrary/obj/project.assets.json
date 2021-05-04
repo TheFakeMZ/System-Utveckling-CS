@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dunder Honung\\source\\repos\\git\\WebApplication\\WebApplication.csproj",
-      "projectName": "WebApplication",
-      "projectPath": "C:\\Users\\Dunder Honung\\source\\repos\\git\\WebApplication\\WebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Dunder Honung\\source\\repos\\git\\DataLibrary\\DataLibrary.csproj",
+      "projectName": "DataLibrary",
+      "projectPath": "C:\\Users\\Dunder Honung\\source\\repos\\git\\DataLibrary\\DataLibrary.csproj",
       "packagesPath": "C:\\Users\\Dunder Honung\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dunder Honung\\source\\repos\\git\\WebApplication\\obj\\",
+      "outputPath": "C:\\Users\\Dunder Honung\\source\\repos\\git\\DataLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -64,9 +64,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
