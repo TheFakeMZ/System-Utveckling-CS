@@ -36,6 +36,7 @@ namespace WebApplication.Models
         [Required(ErrorMessage = "Enter a password!")]
         public string Password { get; set; }
 
+        [Display(Name = "ConfirmPassword")]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "The passwords do not match.")]
         public string ConfirmPassword { get; set; }

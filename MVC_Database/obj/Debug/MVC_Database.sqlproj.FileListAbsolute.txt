@@ -4,3 +4,13 @@ C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\bin\Debug\MVC_Data
 C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\obj\Debug\MVC_Database.sqlprojAssemblyReference.cache
 C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\obj\Debug\MVC_Database.dll
 C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\obj\Debug\MVC_Database.pdb
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\bin\Debug\MVC_Database.dacpac
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\bin\Debug\MVC_Database.dll
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\bin\Debug\MVC_Database.pdb
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\obj\Debug\MVC_Database.sqlprojAssemblyReference.cache
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\obj\Debug\Model.xml
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\obj\Debug\refactor.xml
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\obj\Debug\postdeploy.sql
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\obj\Debug\predeploy.sql
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\obj\Debug\MVC_Database.dll
+C:\Users\Dunder Honung\source\repos\git\MVC_Database\obj\Debug\MVC_Database.pdb
