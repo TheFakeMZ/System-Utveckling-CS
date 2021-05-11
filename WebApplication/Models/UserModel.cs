@@ -8,9 +8,10 @@ namespace WebApplication.Models
 {
     public class UserViewModel
     {
-        [Display(Name = "User ID")]
-        [Range(1,25000, ErrorMessage = "Not a valid User ID!")]
-        public int UserID { get; set; }
+        [Display(Name = "User name")]
+        
+        [Required(ErrorMessage = "Enter a user name!")]
+        public string Username { get; set; }
 
         [Display(Name = "First Name")]
         [Required(ErrorMessage = "Enter a first name!")]
@@ -37,6 +38,6 @@ namespace WebApplication.Models
 
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "The passwords do not match.")]
-        public string ConfirmPassword { get; set; } 
+        public string ConfirmPassword { get; set; }
     }
 }

@@ -32,10 +32,20 @@ namespace WebApplication.Controllers
 
         public ActionResult Register()
         {
-            ViewBag.Message = "User Sign Up"; 
+            ViewBag.Message = "User Sign Up";
             return View();
         }
-
+       [HttpPost]
+       [ValidateAntiForgeryToken]
+        public ActionResult Register(UserViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+       
         public ActionResult Scoreboard()
         {
             ViewBag.Message = "View the final score";

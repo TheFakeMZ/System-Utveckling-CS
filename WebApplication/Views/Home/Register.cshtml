@@ -6,16 +6,15 @@
 
 <h1>Register a new</h1>
 
-<h1> <b> User</b></h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Register">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="UserID" class="control-label"></label>
-                <input asp-for="UserID" class="form-control" />
-                <span asp-validation-for="UserID" class="text-danger"></span>
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>

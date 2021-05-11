@@ -1,0 +1,6 @@
+C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\bin\Debug\MVC_Database.dacpac
+C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\bin\Debug\MVC_Database.dll
+C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\bin\Debug\MVC_Database.pdb
+C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\obj\Debug\MVC_Database.sqlprojAssemblyReference.cache
+C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\obj\Debug\MVC_Database.dll
+C:\Users\zozk\Programering\Git\System-Utveckling\MVC_Database\obj\Debug\MVC_Database.pdb
