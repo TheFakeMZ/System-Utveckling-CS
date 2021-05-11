@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/WebApplicationvault",
+      "type": "secrets.keyVault",
+      "connectionId": "VaultUriD",
+      "secretStore": null
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/dbservergruppd/databases/WebApplication_db",
+      "type": "mssql.azure",
+      "connectionId": "GruppDunderDDatabasServer",
+      "secretStore": "AzureKeyVault"
+    }
+  }
+}
