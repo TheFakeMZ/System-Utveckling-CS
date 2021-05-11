@@ -6,3 +6,5 @@ WebApplication/obj/Debug/netcoreapp3.1/WebApplication.csprojAssemblyReference.ca
 MVC_Database/MVC_Database.dbmdl
 *.jfm
 *.dbmdl
+*.dbmdl
+*.jfm

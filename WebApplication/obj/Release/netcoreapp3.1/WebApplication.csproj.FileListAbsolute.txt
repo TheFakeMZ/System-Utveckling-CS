@@ -154,7 +154,6 @@ C:\Users\Dunder Honung\source\repos\git\WebApplication\bin\Release\netcoreapp3.1
 C:\Users\Dunder Honung\source\repos\git\WebApplication\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Dunder Honung\source\repos\git\WebApplication\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Dunder Honung\source\repos\git\WebApplication\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Dunder Honung\source\repos\git\WebApplication\obj\Release\netcoreapp3.1\WebApplication.csprojAssemblyReference.cache
 C:\Users\Dunder Honung\source\repos\git\WebApplication\obj\Release\netcoreapp3.1\WebApplication.AssemblyInfoInputs.cache
 C:\Users\Dunder Honung\source\repos\git\WebApplication\obj\Release\netcoreapp3.1\WebApplication.AssemblyInfo.cs
 C:\Users\Dunder Honung\source\repos\git\WebApplication\obj\Release\netcoreapp3.1\WebApplication.csproj.CoreCompileInputs.cache

@@ -8,28 +8,34 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\zozk\\.nuget\\packages\\": {}
+    "C:\\Users\\Dunder Honung\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zozk\\Programering\\Git\\System-Utveckling\\DataLibrary\\DataLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Dunder Honung\\source\\repos\\git\\DataLibrary\\DataLibrary.csproj",
       "projectName": "DataLibrary",
-      "projectPath": "C:\\Users\\zozk\\Programering\\Git\\System-Utveckling\\DataLibrary\\DataLibrary.csproj",
-      "packagesPath": "C:\\Users\\zozk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zozk\\Programering\\Git\\System-Utveckling\\DataLibrary\\obj\\",
+      "projectPath": "C:\\Users\\Dunder Honung\\source\\repos\\git\\DataLibrary\\DataLibrary.csproj",
+      "packagesPath": "C:\\Users\\Dunder Honung\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dunder Honung\\source\\repos\\git\\DataLibrary\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\zozk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dunder Honung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\MimerNuget.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files (x86)\\Mimer Data Provider\\v1102a\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
