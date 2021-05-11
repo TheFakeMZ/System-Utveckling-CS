@@ -44,8 +44,8 @@ namespace WebApplication.Controllers
                 return RedirectToAction("Index");
             }
             return View();
-        }
-       
+        }   
+
         public ActionResult Scoreboard()
         {
             ViewBag.Message = "View the final score";
