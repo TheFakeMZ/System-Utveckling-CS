@@ -1,0 +1,5 @@
+C:\Users\Dunder Honung\source\repos\git\MVCDemoDB\bin\Debug\MVCDemoDB.dacpac
+C:\Users\Dunder Honung\source\repos\git\MVCDemoDB\bin\Debug\MVCDemoDB.dll
+C:\Users\Dunder Honung\source\repos\git\MVCDemoDB\bin\Debug\MVCDemoDB.pdb
+C:\Users\Dunder Honung\source\repos\git\MVCDemoDB\obj\Debug\MVCDemoDB.dll
+C:\Users\Dunder Honung\source\repos\git\MVCDemoDB\obj\Debug\MVCDemoDB.pdb

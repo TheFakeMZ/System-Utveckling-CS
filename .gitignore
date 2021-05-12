@@ -1,5 +1,11 @@
+<DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
 
 *.cache
 *.cache
 WebApplication/obj/Debug/netcoreapp3.1/WebApplication.assets.cache
 WebApplication/obj/Debug/netcoreapp3.1/WebApplication.csprojAssemblyReference.cache
+MVC_Database/MVC_Database.dbmdl
+*.jfm
+*.dbmdl
+*.dbmdl
+*.jfm
