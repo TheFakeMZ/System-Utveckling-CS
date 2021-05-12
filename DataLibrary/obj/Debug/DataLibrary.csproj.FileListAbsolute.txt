@@ -1,0 +1,18 @@
+C:\Users\Dunder Honung\source\repos\git\DataLibrary\bin\Debug\DataLibrary.dll
+C:\Users\Dunder Honung\source\repos\git\DataLibrary\bin\Debug\DataLibrary.pdb
+C:\Users\Dunder Honung\source\repos\git\DataLibrary\bin\Debug\Dapper.dll
+C:\Users\Dunder Honung\source\repos\git\DataLibrary\bin\Debug\Dapper.xml
+C:\Users\Dunder Honung\source\repos\git\DataLibrary\obj\Debug\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Dunder Honung\source\repos\git\DataLibrary\obj\Debug\DataLibrary.csproj.CopyComplete
+C:\Users\Dunder Honung\source\repos\git\DataLibrary\obj\Debug\DataLibrary.dll
+C:\Users\Dunder Honung\source\repos\git\DataLibrary\obj\Debug\DataLibrary.pdb
+C:\Users\Dunder Honung\source\repos\git\DataLibrary\obj\Debug\DataLibrary.csprojAssemblyReference.cache
+C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\bin\Debug\DataLibrary.dll
+C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\bin\Debug\DataLibrary.pdb
+C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\bin\Debug\Dapper.dll
+C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\bin\Debug\Dapper.xml
+C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Debug\DataLibrary.csprojAssemblyReference.cache
+C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Debug\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Debug\DataLibrary.csproj.CopyComplete
+C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Debug\DataLibrary.dll
+C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Debug\DataLibrary.pdb
