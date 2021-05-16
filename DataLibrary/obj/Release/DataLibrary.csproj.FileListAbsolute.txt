@@ -1,9 +1,0 @@
-C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\bin\Release\DataLibrary.dll
-C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\bin\Release\DataLibrary.pdb
-C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\bin\Release\Dapper.dll
-C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\bin\Release\Dapper.xml
-C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Release\DataLibrary.csprojAssemblyReference.cache
-C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Release\DataLibrary.csproj.CoreCompileInputs.cache
-C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Release\DataLibrary.csproj.CopyComplete
-C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Release\DataLibrary.dll
-C:\Users\zozk\Programering\Git\System-Utveckling\DataLibrary\obj\Release\DataLibrary.pdb
