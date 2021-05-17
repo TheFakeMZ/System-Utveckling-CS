@@ -12,6 +12,25 @@ using MVCApp.Models;
 
 namespace MVCApp.Controllers
 {
+    public class CustomAuthorize : AuthorizeAttribute
+    {
+        protected override void HandleUnauthorizedRequest(AuthorizationContext context)
+        {
+            if (context.HttpContext.User.Identity.IsAuthenticated)
+            {
+                context.Result = new ViewResult
+                {
+                    ViewName = "~/Views/Shared/Unauthorized.cshtml",
+                };
+            }
+            else
+            {
+                context.Result = new RedirectResult("/Account/Login");
+            }
+        }
+    }
+
+    // Le orignal
     [Authorize]
     public class AccountController : Controller
     {

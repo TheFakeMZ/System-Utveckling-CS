@@ -215,6 +215,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\1.png" />
     <Content Include="Models\TruckDetails.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TruckDetails.edmx</DependentUpon>
@@ -234,6 +235,11 @@
     <Content Include="Models\TruckDetails.edmx.diagram">
       <DependentUpon>TruckDetails.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -245,6 +251,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="styles\font-awesome.min.css" />
+    <Content Include="styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -289,6 +297,8 @@
     <Content Include="Views\TruckRefBrands\Details.cshtml" />
     <Content Include="Views\TruckRefBrands\Edit.cshtml" />
     <Content Include="Views\TruckRefBrands\Index.cshtml" />
+    <Content Include="Views\Shared\Unauthorized.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
