@@ -4,6 +4,7 @@
     ViewBag.Title = "Welcome to Simhopp Europe";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
+<script src="~/Scripts/jquery-3.6.0.min.js"></script>
 
 <section class="w3l-hotair-form">
     <h1>@ViewBag.Title</h1>
@@ -17,27 +18,29 @@
                     @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                     {
                         @Html.AntiForgeryToken()
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                         <hr />
                         <div class="form-group">
-                            <h4> @Html.LabelFor(m => m.Email, new { @class = "glyphicon glyphicon-user col-md-offset-0 col-md-10" })</h4>
+                            <h4><span class="col-md-offset-0 col-md-6 glyphicon glyphicon-user text-info" title="Enter your Email Address"></span></h4>
                             <br />
                             <div class="col-md-12">
-                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                @Html.TextBoxFor(m => m.Email, new { @class = "email", placeholder = "Email Address", type = "email", required = ""})
                                 <br />
                                 @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            <h4> @Html.LabelFor(m => m.Password, new { @class = "glyphicon glyphicon-lock col-md-offset-0 col-md-3" })</h4>
+                            <h4><span class="col-md-offset-0 col-md-6 glyphicon glyphicon-lock text-info" title="Enter your Password"></span></h4>
                             <br />
                             <div class="col-md-12">
 
-                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                @Html.PasswordFor(m => m.Password, new { @class = "password", placeholder = "Password", type = "password", required = ""})
+                                <span class="glyphicon glyphicon-eye-open text-default" title="Click to Display and Hover again to Hide your Password"></span>
                                 <br />
                                 @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                             </div>
                         </div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
                         <br /> <br />
                         <div class="form-group">
                             <div class="col-md-offset-0 col-md-12">
@@ -63,4 +66,15 @@
         </div>
     </div>
 </section>
+
+<script>
+    $(document).ready(function (){
+        $(".glyphicon").mouseup(function (){
+            $("#Password").attr("type", "text")
+        });
+        $(".glyphicon").mouseenter(function () {
+            $("#Password").attr("type", "password")
+        });
+    }); 
+</script>
 
