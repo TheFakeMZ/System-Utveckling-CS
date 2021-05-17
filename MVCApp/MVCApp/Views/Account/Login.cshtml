@@ -6,9 +6,9 @@
 }
 
 <section class="w3l-hotair-form">
-
     <h1>@ViewBag.Title</h1>
     <div class="container">
+
         <!-- /form -->
         <div class="workinghny-form-grid">
             <div class="main-hotair">
@@ -18,44 +18,42 @@
                     {
                         @Html.AntiForgeryToken()
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <h4>
-                    Simhopp will undergo shecduled maintenance 2021-05-26
-                </h4>
-                <hr />
-                <br/> 
-                <div class="form-group">
+                        <hr />
+                        <div class="form-group">
 
-                    <h4> @Html.LabelFor(m => m.Email, new { @class = "col-md-10 control-label" }) </h4>
+                            <h4> @Html.LabelFor(m => m.Email, new { @class = "col-md-offset-0 col-md-3" })</h4>
+                            <br />
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                <br />
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h4> @Html.LabelFor(m => m.Password, new { @class = "col-md-offset-0 col-md-3" })</h4>
+                            <br />
+                            <div class="col-md-12">
 
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        <center> @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })</center>      <br>
-                    </div>
-                </div>
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                <br />
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br /> <br />
+                        <div class="form-group">
+                            <div class="col-md-offset-0 col-md-12">
+                                <button class="btn" type="submit">Log In</button>
+                                <p class="account">Don't have an account? <a href="Register">@Html.ActionLink("Register", "Register")</a></p>
+                            </div>
+                        </div>
 
-                <div class="form-group">
-
-                    <h4> @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })</h4>
-                    <div class="col-md-10">
-
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        <center>  @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })</center>      <br>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <button class="btn" type="submit">Log In</button>
-                    </div>
-                </div>
-
-                <p class="account">Don't have an account? <a href="Register">@Html.ActionLink("Register", "Register")</a></p>
-            }
-                    <div class="col-md-4">
-                        <section id="socialLoginForm">
-                            <br /> <center>  @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })</center>      <br>
-                        </section>
-                    </div>
+                        <br />
+                        <div class="col-md-12">
+                            <section id="socialLoginForm">
+                                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                            </section>
+                        </div>
+                    }
                 </div>
                 <div class="w3l_form align-self">
                     <div class="left_grid_info">
@@ -66,4 +64,4 @@
         </div>
     </div>
 </section>
-    
+
