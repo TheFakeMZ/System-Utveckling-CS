@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="baea4f6294cc4837ac17d64fb245befc" Name="Diagram1">
+        <EntityTypeShape EntityType="WebApplication_dbModel1.Competition" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication_dbModel1.Dive" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication_dbModel1.DiveChar5" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication_dbModel1.DiveCode1" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication_dbModel1.DiveCode2" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication_dbModel1.PlatformsHeight" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication_dbModel1.Score" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__Competitio__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__Competitio__2FCF1A8A" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__Competitio__3587F3E0" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__DiveChar5__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__DiveChar5__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__DiveChar5__3864608B" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__DiveCode1__2B0A656D" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__DiveCode1__30C33EC3" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__DiveCode1__367C1819" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__DiveCode2__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__DiveCode2__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__DiveCode2__37703C52" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__PlatformsH__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__PlatformsH__339FAB6E" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Dive__PlatformsH__395884C4" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication_dbModel1.FK__Score__Dive__3D2915A8" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

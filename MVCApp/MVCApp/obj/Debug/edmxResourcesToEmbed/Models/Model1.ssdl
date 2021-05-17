@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebApplication_dbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Competition">
+    <Key>
+      <PropertyRef Name="CompetitionID" />
+    </Key>
+    <Property Name="CompetitionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="StartTime" Type="time" Precision="7" />
+    <Property Name="EndTime" Type="time" Precision="7" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Adress" Type="varchar" MaxLength="100" />
+    <Property Name="ZIPCode" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="Dive">
+    <Key>
+      <PropertyRef Name="DiveID" />
+    </Key>
+    <Property Name="DiveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Diver" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Competition" Type="int" Nullable="false" />
+    <Property Name="DifficultyScore" Type="int" />
+    <Property Name="DiveCode1" Type="int" Nullable="false" />
+    <Property Name="DiveCode2" Type="int" Nullable="false" />
+    <Property Name="DiveCode3" Type="int" Nullable="false" />
+    <Property Name="DiveCode4" Type="int" />
+    <Property Name="DiveChar5" Type="int" Nullable="false" />
+    <Property Name="PlatformsHeight" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiveChar5">
+    <Key>
+      <PropertyRef Name="DiveCodeID" />
+    </Key>
+    <Property Name="DiveCodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BodyPosition" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiveCode1">
+    <Key>
+      <PropertyRef Name="DiveCodeID" />
+    </Key>
+    <Property Name="DiveCodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DiveGroup" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiveCode2">
+    <Key>
+      <PropertyRef Name="DiveCodeID" />
+    </Key>
+    <Property Name="DiveCodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DiveGroup" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlatformsHeights">
+    <Key>
+      <PropertyRef Name="PlatformsHeightID" />
+    </Key>
+    <Property Name="PlatformsHeightID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Height" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Score">
+    <Key>
+      <PropertyRef Name="ScoreID" />
+    </Key>
+    <Property Name="ScoreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Judge" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Dive" Type="int" Nullable="false" />
+    <Property Name="Score" Type="float" />
+  </EntityType>
+  <Association Name="FK__Dive__Competitio__2A164134">
+    <End Role="Competition" Type="Self.Competition" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competition">
+        <PropertyRef Name="CompetitionID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="Competition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__Competitio__2FCF1A8A">
+    <End Role="Competition" Type="Self.Competition" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competition">
+        <PropertyRef Name="CompetitionID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="Competition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__Competitio__3587F3E0">
+    <End Role="Competition" Type="Self.Competition" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competition">
+        <PropertyRef Name="CompetitionID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="Competition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__DiveChar5__2CF2ADDF">
+    <End Role="DiveChar5" Type="Self.DiveChar5" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiveChar5">
+        <PropertyRef Name="DiveCodeID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="DiveChar5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__DiveChar5__32AB8735">
+    <End Role="DiveChar5" Type="Self.DiveChar5" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiveChar5">
+        <PropertyRef Name="DiveCodeID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="DiveChar5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__DiveChar5__3864608B">
+    <End Role="DiveChar5" Type="Self.DiveChar5" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiveChar5">
+        <PropertyRef Name="DiveCodeID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="DiveChar5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__DiveCode1__2B0A656D">
+    <End Role="DiveCode1" Type="Self.DiveCode1" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiveCode1">
+        <PropertyRef Name="DiveCodeID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="DiveCode1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__DiveCode1__30C33EC3">
+    <End Role="DiveCode1" Type="Self.DiveCode1" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiveCode1">
+        <PropertyRef Name="DiveCodeID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="DiveCode1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__DiveCode1__367C1819">
+    <End Role="DiveCode1" Type="Self.DiveCode1" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiveCode1">
+        <PropertyRef Name="DiveCodeID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="DiveCode1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__DiveCode2__2BFE89A6">
+    <End Role="DiveCode2" Type="Self.DiveCode2" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiveCode2">
+        <PropertyRef Name="DiveCodeID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="DiveCode2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__DiveCode2__31B762FC">
+    <End Role="DiveCode2" Type="Self.DiveCode2" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiveCode2">
+        <PropertyRef Name="DiveCodeID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="DiveCode2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__DiveCode2__37703C52">
+    <End Role="DiveCode2" Type="Self.DiveCode2" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiveCode2">
+        <PropertyRef Name="DiveCodeID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="DiveCode2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__PlatformsH__2DE6D218">
+    <End Role="PlatformsHeights" Type="Self.PlatformsHeights" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlatformsHeights">
+        <PropertyRef Name="PlatformsHeightID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="PlatformsHeight" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__PlatformsH__339FAB6E">
+    <End Role="PlatformsHeights" Type="Self.PlatformsHeights" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlatformsHeights">
+        <PropertyRef Name="PlatformsHeightID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="PlatformsHeight" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Dive__PlatformsH__395884C4">
+    <End Role="PlatformsHeights" Type="Self.PlatformsHeights" Multiplicity="1" />
+    <End Role="Dive" Type="Self.Dive" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlatformsHeights">
+        <PropertyRef Name="PlatformsHeightID" />
+      </Principal>
+      <Dependent Role="Dive">
+        <PropertyRef Name="PlatformsHeight" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Score__Dive__3D2915A8">
+    <End Role="Dive" Type="Self.Dive" Multiplicity="1" />
+    <End Role="Score" Type="Self.Score" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dive">
+        <PropertyRef Name="DiveID" />
+      </Principal>
+      <Dependent Role="Score">
+        <PropertyRef Name="Dive" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WebApplication_dbModel1StoreContainer">
+    <EntitySet Name="Competition" EntityType="Self.Competition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dive" EntityType="Self.Dive" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiveChar5" EntityType="Self.DiveChar5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiveCode1" EntityType="Self.DiveCode1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiveCode2" EntityType="Self.DiveCode2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlatformsHeights" EntityType="Self.PlatformsHeights" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Score" EntityType="Self.Score" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Dive__Competitio__2A164134" Association="Self.FK__Dive__Competitio__2A164134">
+      <End Role="Competition" EntitySet="Competition" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__Competitio__2FCF1A8A" Association="Self.FK__Dive__Competitio__2FCF1A8A">
+      <End Role="Competition" EntitySet="Competition" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__Competitio__3587F3E0" Association="Self.FK__Dive__Competitio__3587F3E0">
+      <End Role="Competition" EntitySet="Competition" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__DiveChar5__2CF2ADDF" Association="Self.FK__Dive__DiveChar5__2CF2ADDF">
+      <End Role="DiveChar5" EntitySet="DiveChar5" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__DiveChar5__32AB8735" Association="Self.FK__Dive__DiveChar5__32AB8735">
+      <End Role="DiveChar5" EntitySet="DiveChar5" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__DiveChar5__3864608B" Association="Self.FK__Dive__DiveChar5__3864608B">
+      <End Role="DiveChar5" EntitySet="DiveChar5" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__DiveCode1__2B0A656D" Association="Self.FK__Dive__DiveCode1__2B0A656D">
+      <End Role="DiveCode1" EntitySet="DiveCode1" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__DiveCode1__30C33EC3" Association="Self.FK__Dive__DiveCode1__30C33EC3">
+      <End Role="DiveCode1" EntitySet="DiveCode1" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__DiveCode1__367C1819" Association="Self.FK__Dive__DiveCode1__367C1819">
+      <End Role="DiveCode1" EntitySet="DiveCode1" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__DiveCode2__2BFE89A6" Association="Self.FK__Dive__DiveCode2__2BFE89A6">
+      <End Role="DiveCode2" EntitySet="DiveCode2" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__DiveCode2__31B762FC" Association="Self.FK__Dive__DiveCode2__31B762FC">
+      <End Role="DiveCode2" EntitySet="DiveCode2" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__DiveCode2__37703C52" Association="Self.FK__Dive__DiveCode2__37703C52">
+      <End Role="DiveCode2" EntitySet="DiveCode2" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__PlatformsH__2DE6D218" Association="Self.FK__Dive__PlatformsH__2DE6D218">
+      <End Role="PlatformsHeights" EntitySet="PlatformsHeights" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__PlatformsH__339FAB6E" Association="Self.FK__Dive__PlatformsH__339FAB6E">
+      <End Role="PlatformsHeights" EntitySet="PlatformsHeights" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Dive__PlatformsH__395884C4" Association="Self.FK__Dive__PlatformsH__395884C4">
+      <End Role="PlatformsHeights" EntitySet="PlatformsHeights" />
+      <End Role="Dive" EntitySet="Dive" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Score__Dive__3D2915A8" Association="Self.FK__Score__Dive__3D2915A8">
+      <End Role="Dive" EntitySet="Dive" />
+      <End Role="Score" EntitySet="Score" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

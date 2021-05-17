@@ -1,0 +1,43 @@
+﻿@model MVCApp.Models.Score
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Score</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Judge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Judge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Score1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Score1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dive1.Diver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dive1.Diver)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ScoreID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

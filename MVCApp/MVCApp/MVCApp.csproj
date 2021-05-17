@@ -172,16 +172,58 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CompetitionsController.cs" />
+    <Compile Include="Controllers\DiveChar5Controller.cs" />
+    <Compile Include="Controllers\DiveCode1Controller.cs" />
+    <Compile Include="Controllers\DiveCode2Controller.cs" />
+    <Compile Include="Controllers\DivesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ScoresController.cs" />
     <Compile Include="Controllers\TruckDetailsController.cs" />
     <Compile Include="Controllers\TruckRefBrandsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Competition.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dive.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiveChar5.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiveCode1.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiveCode2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PlatformsHeight.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Score.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TruckDetail.cs">
       <DependentUpon>TruckDetails.tt</DependentUpon>
     </Compile>
@@ -217,6 +259,16 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\1.png" />
     <Content Include="images\4.png" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\TruckDetails.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TruckDetails.edmx</DependentUpon>
@@ -241,6 +293,13 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -300,6 +359,36 @@
     <Content Include="Views\TruckRefBrands\Index.cshtml" />
     <Content Include="Views\Shared\Unauthorized.cshtml" />
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Views\Competitions\Create.cshtml" />
+    <Content Include="Views\Competitions\Delete.cshtml" />
+    <Content Include="Views\Competitions\Details.cshtml" />
+    <Content Include="Views\Competitions\Edit.cshtml" />
+    <Content Include="Views\Competitions\Index.cshtml" />
+    <Content Include="Views\Dives\Create.cshtml" />
+    <Content Include="Views\Dives\Delete.cshtml" />
+    <Content Include="Views\Dives\Details.cshtml" />
+    <Content Include="Views\Dives\Edit.cshtml" />
+    <Content Include="Views\Dives\Index.cshtml" />
+    <Content Include="Views\Scores\Create.cshtml" />
+    <Content Include="Views\Scores\Delete.cshtml" />
+    <Content Include="Views\Scores\Details.cshtml" />
+    <Content Include="Views\Scores\Edit.cshtml" />
+    <Content Include="Views\Scores\Index.cshtml" />
+    <Content Include="Views\DiveChar5\Create.cshtml" />
+    <Content Include="Views\DiveChar5\Delete.cshtml" />
+    <Content Include="Views\DiveChar5\Details.cshtml" />
+    <Content Include="Views\DiveChar5\Edit.cshtml" />
+    <Content Include="Views\DiveChar5\Index.cshtml" />
+    <Content Include="Views\DiveCode1\Create.cshtml" />
+    <Content Include="Views\DiveCode1\Delete.cshtml" />
+    <Content Include="Views\DiveCode1\Details.cshtml" />
+    <Content Include="Views\DiveCode1\Edit.cshtml" />
+    <Content Include="Views\DiveCode1\Index.cshtml" />
+    <Content Include="Views\DiveCode2\Create.cshtml" />
+    <Content Include="Views\DiveCode2\Delete.cshtml" />
+    <Content Include="Views\DiveCode2\Details.cshtml" />
+    <Content Include="Views\DiveCode2\Edit.cshtml" />
+    <Content Include="Views\DiveCode2\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
