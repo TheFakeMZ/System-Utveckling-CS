@@ -11,7 +11,8 @@ namespace MVCApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Competition
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,8 +25,15 @@ namespace MVCApp.Models
     
         public int CompetitionID { get; set; }
         public string Name { get; set; }
+
+        [DataType(DataType.Date)]
         public System.DateTime Date { get; set; }
+
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
         public Nullable<System.TimeSpan> StartTime { get; set; }
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
         public Nullable<System.TimeSpan> EndTime { get; set; }
         public string City { get; set; }
         public string Adress { get; set; }
