@@ -1,0 +1,27 @@
+﻿@model MVCApp.Models.DiveChar5
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DiveChar5</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyPosition)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DiveCodeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

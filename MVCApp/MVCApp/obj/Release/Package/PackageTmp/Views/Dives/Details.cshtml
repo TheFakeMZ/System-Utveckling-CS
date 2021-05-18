@@ -1,0 +1,171 @@
+﻿@model MVCApp.Models.Dive
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Dive</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Diver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diver)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DifficultyScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DifficultyScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveCode3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveCode3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveCode4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveCode4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Competition1.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Competition1.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Competition2.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Competition2.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Competition3.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Competition3.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveChar51.BodyPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveChar51.BodyPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveChar52.BodyPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveChar52.BodyPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveChar53.BodyPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveChar53.BodyPosition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveCode11.DiveGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveCode11.DiveGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveCode12.DiveGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveCode12.DiveGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveCode13.DiveGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveCode13.DiveGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveCode21.DiveGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveCode21.DiveGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveCode22.DiveGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveCode22.DiveGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveCode23.DiveGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveCode23.DiveGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlatformsHeight1.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlatformsHeight1.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlatformsHeight2.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlatformsHeight2.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlatformsHeight3.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlatformsHeight3.Height)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DiveID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

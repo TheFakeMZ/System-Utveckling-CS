@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApplication_dbModel1StoreContainer" CdmEntityContainer="DiveModel">
+    <EntitySetMapping Name="Competitions">
+      <EntityTypeMapping TypeName="WebApplication_dbModel1.Competition">
+        <MappingFragment StoreEntitySet="Competition">
+          <ScalarProperty Name="CompetitionID" ColumnName="CompetitionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="ZIPCode" ColumnName="ZIPCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dives">
+      <EntityTypeMapping TypeName="WebApplication_dbModel1.Dive">
+        <MappingFragment StoreEntitySet="Dive">
+          <ScalarProperty Name="DiveID" ColumnName="DiveID" />
+          <ScalarProperty Name="Diver" ColumnName="Diver" />
+          <ScalarProperty Name="Competition" ColumnName="Competition" />
+          <ScalarProperty Name="DifficultyScore" ColumnName="DifficultyScore" />
+          <ScalarProperty Name="DiveCode1" ColumnName="DiveCode1" />
+          <ScalarProperty Name="DiveCode2" ColumnName="DiveCode2" />
+          <ScalarProperty Name="DiveCode3" ColumnName="DiveCode3" />
+          <ScalarProperty Name="DiveCode4" ColumnName="DiveCode4" />
+          <ScalarProperty Name="DiveChar5" ColumnName="DiveChar5" />
+          <ScalarProperty Name="PlatformsHeight" ColumnName="PlatformsHeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiveChar5">
+      <EntityTypeMapping TypeName="WebApplication_dbModel1.DiveChar5">
+        <MappingFragment StoreEntitySet="DiveChar5">
+          <ScalarProperty Name="DiveCodeID" ColumnName="DiveCodeID" />
+          <ScalarProperty Name="BodyPosition" ColumnName="BodyPosition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiveCode1">
+      <EntityTypeMapping TypeName="WebApplication_dbModel1.DiveCode1">
+        <MappingFragment StoreEntitySet="DiveCode1">
+          <ScalarProperty Name="DiveCodeID" ColumnName="DiveCodeID" />
+          <ScalarProperty Name="DiveGroup" ColumnName="DiveGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiveCode2">
+      <EntityTypeMapping TypeName="WebApplication_dbModel1.DiveCode2">
+        <MappingFragment StoreEntitySet="DiveCode2">
+          <ScalarProperty Name="DiveCodeID" ColumnName="DiveCodeID" />
+          <ScalarProperty Name="DiveGroup" ColumnName="DiveGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlatformsHeights">
+      <EntityTypeMapping TypeName="WebApplication_dbModel1.PlatformsHeight">
+        <MappingFragment StoreEntitySet="PlatformsHeights">
+          <ScalarProperty Name="PlatformsHeightID" ColumnName="PlatformsHeightID" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Scores">
+      <EntityTypeMapping TypeName="WebApplication_dbModel1.Score">
+        <MappingFragment StoreEntitySet="Score">
+          <ScalarProperty Name="ScoreID" ColumnName="ScoreID" />
+          <ScalarProperty Name="Judge" ColumnName="Judge" />
+          <ScalarProperty Name="Dive" ColumnName="Dive" />
+          <ScalarProperty Name="Score1" ColumnName="Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
