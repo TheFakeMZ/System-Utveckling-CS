@@ -54,7 +54,6 @@ namespace MVCApp.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(competition);
         }
 
