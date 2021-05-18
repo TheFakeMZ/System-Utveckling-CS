@@ -11,7 +11,8 @@ namespace MVCApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Dive
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,10 +25,15 @@ namespace MVCApp.Models
         public string Diver { get; set; }
         public int Competition { get; set; }
         public Nullable<int> DifficultyScore { get; set; }
+        [Display(Name = "Dive group")]
         public int DiveCode1 { get; set; }
+        [Display(Name = "Second digit")]
         public int DiveCode2 { get; set; }
+        [Display(Name = "Number of half somersaults")]
         public int DiveCode3 { get; set; }
+        [Display(Name = "Number of half twists")]
         public Nullable<int> DiveCode4 { get; set; }
+        [Display(Name = "Body position")]
         public int DiveChar5 { get; set; }
         public int PlatformsHeight { get; set; }
     
