@@ -10,6 +10,7 @@
 namespace MVCApp.Models
 {
     using System;
+    using System.Collections;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
@@ -32,5 +33,6 @@ namespace MVCApp.Models
         public virtual DbSet<DiveCode2> DiveCode2 { get; set; }
         public virtual DbSet<PlatformsHeight> PlatformsHeights { get; set; }
         public virtual DbSet<Score> Scores { get; set; }
+        public IEnumerable AspNetUsers { get; internal set; }
     }
 }
