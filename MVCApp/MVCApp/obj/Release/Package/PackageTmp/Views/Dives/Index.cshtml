@@ -2,97 +2,107 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br /><br /><br />
+<div style="text-align:center"><h1>Index</h1> 
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p><br />
+  @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Diver)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DifficultyScore)
-        </th>
-        
-        <th>
-            @Html.DisplayNameFor(model => model.DiveCode4)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Competition1.Name)
         </th>
+
         <th>
-            @Html.DisplayNameFor(model => model.DiveChar53.BodyPosition)
+            @Html.DisplayNameFor(model => model.Diver)
         </th>
-       
+
         <th>
             @Html.DisplayNameFor(model => model.DiveCode13.DiveGroup)
         </th>
-        
+
         <th>
             @Html.DisplayNameFor(model => model.DiveCode23.DiveGroup)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.DiveCode3)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.DiveCode4)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.DiveChar53.BodyPosition)
+        </th>
+
+
+        <th>
             @Html.DisplayNameFor(model => model.PlatformsHeight3.Height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DifficultyScore)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Diver)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DifficultyScore)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DiveCode3)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DiveCode4)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.Competition3.Name)
-        </td>
-       
-        <td>
-            @Html.DisplayFor(modelItem => item.DiveChar53.BodyPosition)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.DiveCode13.DiveGroup)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.DiveCode23.DiveGroup)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.PlatformsHeight3.Height)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.DiveID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.DiveID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.DiveID }) |
-            @Html.ActionLink(
-                    linkText: "Add Score",
-                    actionName: "Create",
-                    controllerName: "Scores",
-                    routeValues: new
-                    {
-                        Dive = item.DiveID
-                    },
-                    htmlAttributes: null
-                )
-      
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Competition3.Name)
+    <td>
+        @Html.DisplayFor(modelItem => item.Diver)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DiveCode13.DiveGroup)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DiveCode23.DiveGroup)
+    </td>
 
+    <td>
+        @Html.DisplayFor(modelItem => item.DiveCode3)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DiveCode4)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.DiveChar53.BodyPosition)
+    </td>
+
+
+    <td>
+        @Html.DisplayFor(modelItem => item.PlatformsHeight3.Height)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DifficultyScore)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.DiveID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.DiveID }) |
+        @Html.ActionLink(
+                linkText: "Add Score",
+                actionName: "Create",
+                controllerName: "Scores",
+                routeValues: new
+                {
+                    Dive = item.DiveID
+                },
+                htmlAttributes: null
+            )
+
+    </td>
+</tr>
+    }
+
+    <br />
+    <br />
 </table>
+<br />
+<br /> 
