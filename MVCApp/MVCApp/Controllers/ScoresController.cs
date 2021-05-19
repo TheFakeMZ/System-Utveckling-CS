@@ -44,7 +44,8 @@ namespace MVCApp.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            ViewBag.Dive = new SelectList(db.Dives, "DiveID", "Diver");
+            ViewBag.diveID = dive;
+            ViewBag.Dive = new SelectList(db.Dives, "DiveID", "DiveID");
             return View();
         }
 
@@ -55,6 +56,7 @@ namespace MVCApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ScoreID,Judge,Dive,Score1")] Score score)
         {
+            var extra = score.Dive;
             if (ModelState.IsValid)
             {
                 db.Scores.Add(score);
@@ -62,7 +64,7 @@ namespace MVCApp.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Dive = new SelectList(db.Dives, "DiveID", "Diver", score.Dive);
+            ViewBag.Dive = new SelectList(db.Dives, "DiveID", "DiveID", score.Dive);
             return View(score);
         }
 
