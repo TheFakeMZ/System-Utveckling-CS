@@ -37,8 +37,13 @@ namespace MVCApp.Controllers
         }
 
         // GET: Scores/Create
-        public ActionResult Create()
+        public ActionResult Create(int? dive)
         {
+            if (dive == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
             ViewBag.Dive = new SelectList(db.Dives, "DiveID", "Diver");
             return View();
         }

@@ -36,40 +36,7 @@ namespace MVCApp.Controllers
             }
             return View(dive);
         }
-        public ActionResult Mirko()
-        {
-            List<SelectListItem> items = new List<SelectListItem>();
-            foreach (string userName in Roles.GetUsersInRole("Admin"))
-            {
-                var user = Membership.GetUser(userName);
-                SelectListItem li = new SelectListItem
-                {
-                    Value = user.ProviderUserKey.ToString(),
-                    Text = user.UserName,
-                };
-                items.Add(li);
-            }
-            items.Add(new SelectListItem { Text = "Please Select...", Value = "na", Selected = true });
-            ViewBag.Users = items;
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Mirko(Dive model)
-        {
-            if (ModelState.IsValid)
-            {
-                /*Only used to show that user was retrieved*/
-                TempData["message"] = "Saved Diver";
-                TempData["user"] = model.User;
-
-                /* employeeRepository.Save(employee) */
-
-                /* Redirect to where you want to go */
-                return RedirectToAction("Mirko", "Home");
-            }
-            return View(model);
-        }
+        
 
         
 
@@ -151,9 +118,7 @@ namespace MVCApp.Controllers
             }
            
             ViewBag.Competition = new SelectList(db.Competitions, "CompetitionID", "Name", dive.Competition);
-           
             ViewBag.DiveChar5 = new SelectList(db.DiveChar5, "DiveCodeID", "BodyPosition", dive.DiveChar5);
-           
             ViewBag.DiveCode1 = new SelectList(db.DiveCode1, "DiveCodeID", "DiveGroup", dive.DiveCode1);
             ViewBag.DiveCode2 = new SelectList(db.DiveCode2, "DiveCodeID", "DiveGroup", dive.DiveCode2);
            
