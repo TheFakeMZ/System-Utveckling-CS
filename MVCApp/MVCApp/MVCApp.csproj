@@ -186,9 +186,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105191721049_%27added_gender_name_age%27.cs" />
-    <Compile Include="Migrations\202105191721049_%27added_gender_name_age%27.Designer.cs">
-      <DependentUpon>202105191721049_%27added_gender_name_age%27.cs</DependentUpon>
+    <Compile Include="Migrations\202105161856269_InitialCreate.cs" />
+    <Compile Include="Migrations\202105161856269_InitialCreate.Designer.cs">
+      <DependentUpon>202105161856269_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105191800313_%27Tes%27.cs" />
+    <Compile Include="Migrations\202105191800313_%27Tes%27.Designer.cs">
+      <DependentUpon>202105191800313_%27Tes%27.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -431,8 +435,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105191721049_%27added_gender_name_age%27.resx">
-      <DependentUpon>202105191721049_%27added_gender_name_age%27.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105161856269_InitialCreate.resx">
+      <DependentUpon>202105161856269_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105191800313_%27Tes%27.resx">
+      <DependentUpon>202105191800313_%27Tes%27.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
