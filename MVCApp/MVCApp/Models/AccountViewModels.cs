@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
+using System; 
+using CompareAttribute = System.ComponentModel.DataAnnotations.CompareAttribute;
 
 namespace MVCApp.Models
 {
@@ -62,8 +65,24 @@ namespace MVCApp.Models
         public bool RememberMe { get; set; }
     }
 
+
     public class RegisterViewModel
     {
+        [Required(ErrorMessage = "First name is Required!")]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Last name is Required!")]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Not a valid age")]
+        [Display(Name = "Age")]
+        public Int32? Age { get; set; }
+
+        [Display(Name = "Gender")]
+        public string Gender { get; set; }
+
         public string Name { get; set; }
 
         [Required]

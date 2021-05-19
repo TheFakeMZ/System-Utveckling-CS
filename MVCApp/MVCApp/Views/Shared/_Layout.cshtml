@@ -6,6 +6,9 @@
     <title>@ViewBag.Title - Simhopp EU</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jqueryval")
+    <link rel="stylesheet" runat="server" href="/Content/Site.css" type="text/css" />
+    <link rel="stylesheet" runat="server" href="/Content/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .mynav_longSubmitButton {
@@ -72,7 +75,7 @@
 
                 .mynav_dropdown-content a:hover {
                     background-color: #94ed79;
-                    opacity = 0.6
+                    opacity: = 0.6
                 }
 
         .mynav_dropdown:hover .mynav_dropdown-content {
@@ -115,12 +118,12 @@
                                         <a href="/Role/">Role</a>
                                         <a href="/Competitions">Competitions</a>
                                         <a href="/Account/Register">Register</a>
+                                    </div> 
                                 </b>
                                 </div>
                             </div>
             </div>
         </div>
-    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -129,6 +132,7 @@
         <footer>
             <p>&copy; @DateTime.Now.Year - Simhopp EU&trade;</p>
         </footer>
+   </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

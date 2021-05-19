@@ -9,6 +9,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jqueryval")
+    <link rel="stylesheet" runat="server" href="/Content/Site.css" type="text/css" />
+    <link rel="stylesheet" runat="server" href="/Content/bootstrap.css" type="text/css" />
 </head>
 
 <body>
@@ -22,15 +24,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Simhopp EU", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Competitions", "Index", "Competitions")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Roles", "Index", "Role")</li>
-
+                    <li>@Html.ActionLink("Divers", "Index", "Dives")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

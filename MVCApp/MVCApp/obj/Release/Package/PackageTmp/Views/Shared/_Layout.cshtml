@@ -3,9 +3,85 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Simhopp EU</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jqueryval")
+    <link rel="stylesheet" runat="server" href="/Content/Site.css" type="text/css" />
+    <link rel="stylesheet" runat="server" href="/Content/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .mynav_longSubmitButton {
+            height: 51px;
+            width: 120px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mynav_navbar {
+            overflow: hidden;
+            background-color: none;
+        }
+
+            .mynav_navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                background-color: #98c4ff;
+            }
+
+        .mynav_dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+            .mynav_dropdown .mynav_dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .mynav_navbar a:hover, .mynav_dropdown:hover .mynav_dropbtn {
+                background-color: #f3d742;
+            }
+
+        .mynav_dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 142px;
+            box-shadow: 0px 8px 16px 0px #acddff;
+            z-index: 1;
+        }
+
+            .mynav_dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .mynav_dropdown-content a:hover {
+                    background-color: #94ed79;
+                    opacity: = 0.6
+                }
+
+        .mynav_dropdown:hover .mynav_dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,27 +93,46 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <b> @Html.ActionLink("   Simhopp EU", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</b>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Roles", "Index", "Role")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+            <b>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li>@Html.ActionLink("Competitions", "Index", "Competitions")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Divers", "Index", "Dives")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </b>
+                        <div class=" mynav_navbar">
+                            <div class="mynav_dropdown">
+                                <button class="mynav_dropbtn ">
+                                    <b>Admin Menu</b>
+                                    <i class="fa fa-caret-down "></i>
+                                </button>
+                                <b>
+                                    <div class="mynav_dropdown-content">
+                                        <a href="/Role/">Role</a>
+                                        <a href="/Competitions">Competitions</a>
+                                        <a href="/Account/Register">Register</a>
+                                    </div> 
+                                </b>
+                                </div>
+                            </div>
             </div>
         </div>
-    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
-
+    <div style="text-align:center">
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Simhopp EU&trade;</p>
+        </footer>
+   </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
