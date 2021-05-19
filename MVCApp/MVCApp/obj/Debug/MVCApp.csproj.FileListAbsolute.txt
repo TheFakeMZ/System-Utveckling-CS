@@ -171,4 +171,3 @@ C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.csproj.Co
 C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.csproj.CopyComplete
 C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.dll
 C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.pdb
-C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.csprojAssemblyReference.cache

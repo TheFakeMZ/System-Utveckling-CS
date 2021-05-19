@@ -10,7 +10,6 @@ using MVCApp.Models;
 
 namespace MVCApp.Controllers
 {
-    [CustomAuthorize (Roles ="Admin")]
     public class TruckRefBrandsController : Controller
     {
         private TruckDataEntities db = new TruckDataEntities();

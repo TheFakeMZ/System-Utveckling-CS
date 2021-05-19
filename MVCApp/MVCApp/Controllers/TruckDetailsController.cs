@@ -10,7 +10,6 @@ using MVCApp.Models;
 
 namespace MVCApp.Controllers
 { 
-    [CustomAuthorize (Roles = "Admin,Judge")]
     public class TruckDetailsController : Controller
     {
        

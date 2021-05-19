@@ -12,33 +12,16 @@ using MVCApp.Models;
 
 namespace MVCApp.Controllers
 {
-    public class CustomAuthorize : AuthorizeAttribute
-    {
-        protected override void HandleUnauthorizedRequest(AuthorizationContext context)
-        {
-            if (context.HttpContext.User.Identity.IsAuthenticated)
-            {
-                context.Result = new ViewResult
-                {
-                    ViewName = "~/Views/Shared/Unauthorized.cshtml",
-                };
-            }
-            else
-            {
-                context.Result = new RedirectResult("/Account/Login");
-            }
-        }
-    }
-
-    // Le orignal
     [Authorize]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext context; 
 
         public AccountController()
         {
+            context = new ApplicationDbContext(); 
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -189,6 +172,31 @@ namespace MVCApp.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        public ActionResult RegisterRole()
+        {
+            ViewBag.Name = new SelectList(context.Roles.ToList(), "Name", "Name");
+            ViewBag.UserName = new SelectList(context.Users.ToList(), "UserName", "UserName");
+            return View(); 
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> RegisterRole(RegisterViewModel model, ApplicationUser user)
+        {
+            var userId = context.Users.Where(i => i.UserName == user.UserName).Select(s => s.Id);
+            string updateId = ""; 
+            foreach (var i in userId)
+            {
+                updateId = i.ToString(); 
+            }
+
+            await this.UserManager.AddToRoleAsync(updateId, model.Name);
+            return RedirectToAction("Index", "Home");  
         }
 
         //
