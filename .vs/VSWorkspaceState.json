@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MVCApp"
   ],
-  "SelectedNode": "\\MVC.sln",
+  "SelectedNode": "\\MVCApp\\MVC.sln",
   "PreviewInSolutionExplorer": false
 }

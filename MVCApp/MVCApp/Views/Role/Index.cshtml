@@ -1,37 +1,56 @@
 ﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
-@{ 
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<tag text-align: center;> 
+    <h2>Available Roles For Applicaition</h2>
+    <section class="col-sm-10">
+        <br />
+        <br />
+        <table class="table-bordered">
 
-<h2>Available Roles For Applicaition</h2>
-<section class="col-sm-6">
-    <table class="table-bordered">
-        @Html.ActionLink("Create Role", "Create", "Role") 
-    </table>
+            @Html.ActionLink("Create Role", "Create", "Role")
+        </table>
+        <p></p>
+    </section>
+    <section class="col-sm-12">
+        <table class="table-bordered">
+            @Html.ActionLink("Assign Role To User", "RegisterRole", "Account")
+        </table>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
-</section>
-<section class="col-sm-6">
-    <table class="table-bordered">
-        @Html.ActionLink("Assign Role To User", "RegisterRole", "Account")
-    </table>
-</section>
-
-<br /> 
-
-<table class="table table-bordered table-hover">
-    <tr>
-        <th class="c">
-            Role Name
-        </th>
-    <tr>
-        @foreach (var item in Model)
-        {
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th class="c">
+                Role Name
+            </th>
+        <tr>
+            @foreach (var item in Model)
+            {
             <tr>
                 <td class="c">
                     @item.Name
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Name }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Name }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Name })
                 </td>
-            </tr> 
-        }    
+            </tr>
+        }
 
-</table>
+        </table>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
