@@ -12,7 +12,6 @@ using MVCApp.Models;
 
 namespace MVCApp.Controllers
 {  
-
     public class CustomAuthorize : AuthorizeAttribute
     {
         protected override void HandleUnauthorizedRequest(AuthorizationContext context)
@@ -157,7 +156,7 @@ namespace MVCApp.Controllers
 
         //
         // GET: /Account/Register
-        [AllowAnonymous]
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Register()
         {
             return View();
@@ -166,7 +165,7 @@ namespace MVCApp.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [AllowAnonymous]
+        [CustomAuthorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
@@ -202,7 +201,7 @@ namespace MVCApp.Controllers
             return View(model);
         }
 
-        [AllowAnonymous]
+        [CustomAuthorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult RegisterRole()
         {
@@ -212,7 +211,7 @@ namespace MVCApp.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
+        [CustomAuthorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> RegisterRole(RegisterViewModel model, ApplicationUser user)
         {

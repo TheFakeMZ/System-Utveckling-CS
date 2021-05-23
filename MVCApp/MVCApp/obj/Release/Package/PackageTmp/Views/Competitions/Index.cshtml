@@ -5,13 +5,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
+
 <br />
 <br />
-<h1><b> <div style="text-align:center">Index</b></h1>
+<h1><b> <div style="text-align:center">Index of Competitions</b></h1>
 
 <p>
-    <h2>  @Html.ActionLink("Create New", "Create")</h2>
-</p>
+    @if (User.IsInRole("Admin"))
+    {
+        <h2>  @Html.ActionLink("Create New", "Create")</h2>
+    }
+    </p>
 <br />
 <h4>
 
@@ -66,9 +70,17 @@
                     @Html.DisplayFor(modelItem => item.ZIPCode)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.CompetitionID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.CompetitionID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.CompetitionID })
+                    @if (User.IsInRole("Admin"))
+                    {
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CompetitionID }) 
+                    <a>|</a>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CompetitionID });
+                    }
+                </td>
+                <td>
+                    <a>|</a> @Html.ActionLink("Details", "Details", new { id = item.CompetitionID }) 
+
                 </td>
             </tr>
         }

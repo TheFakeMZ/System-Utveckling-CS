@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -93,36 +94,34 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <b> @Html.ActionLink("   Simhopp EU", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</b>
+                <b> @Html.ActionLink("Simhopp EU", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</b>
             </div>
-            <b>
-                <div class="navbar-collapse collapse">
+            <b 
+                   <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-
-                        <li>@Html.ActionLink("Competitions", "Index", "Competitions")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Divers", "Index", "Dives")</li>
+               @if (User.IsInRole("Admin")) { 
+                        <div class=" mynav_navbar">
+                            <div class="mynav_dropdown">
+                                <button class="mynav_dropbtn ">
+                                    <b>Admin stuff</b>
+                                    <i class="fa fa-caret-down "></i>
+                                </button>
+                                    <b>
+                                        <div class="mynav_dropdown-content">
+                                            <a href="/Account/Register">Register</a>
+                                            <a href="/Role/">Role</a>
+                                            <a href="/Competitions">Competitions</a>
+                                            <a href="/Dives/">Dives</a>
+                                        </div>
+                                    </b>
+                            </div>
+                        </div>
+                      }
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>
             </b>
-                        <div class=" mynav_navbar">
-                            <div class="mynav_dropdown">
-                                <button class="mynav_dropbtn ">
-                                    <b>Admin Menu</b>
-                                    <i class="fa fa-caret-down "></i>
-                                </button>
-                                <b>
-                                    <div class="mynav_dropdown-content">
-                                        <a href="/Role/">Role</a>
-                                        <a href="/Competitions">Competitions</a>
-                                        <a href="/Account/Register">Register</a>
-                                    </div> 
-                                </b>
-                                </div>
-                            </div>
-            </div>
+        </div>
         </div>
     <div class="container body-content">
         @RenderBody()

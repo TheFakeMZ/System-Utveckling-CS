@@ -171,9 +171,10 @@ C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.csproj.Co
 C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.csproj.CopyComplete
 C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.dll
 C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.pdb
-C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.csprojAssemblyReference.cache
-C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.Migrations.added_gender_name_age.resources
 C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.csproj.GenerateResource.cache
 C:\Users\zozk\Programering\Git\MVCApp\MVCApp\obj\Debug\MVCApp.Migrations.InitialCreate.resources
 C:\Users\zozk\Programering\Git\MVCApp\MVCApp\obj\Debug\MVCApp.csproj.GenerateResource.cache
 C:\Users\zozk\Programering\Git\MVCApp\MVCApp\obj\Debug\MVCApp.Migrations.Tes.resources
+C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.Migrations.InitialCreate.resources
+C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.Migrations.Tes.resources
+C:\Users\Dunder Honung\source\repos\git\MVCApp\MVCApp\obj\Debug\MVCApp.csprojAssemblyReference.cache
