@@ -29,24 +29,7 @@
             <b
                    <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-               @if (User.IsInRole("Admin")) {
-                        <div class=" mynav_navbar">
-                            <div class="mynav_dropdown">
-                                <button class="mynav_dropbtn ">
-                                    <b>Admin stuff</b>
-                                    <i class="fa fa-caret-down "></i>
-                                </button>
-                                    <b>
-                                        <div class="mynav_dropdown-content">
-                                            <a href="/Account/Register">Register</a>
-                                            <a href="/Role/">Role</a>
-                                            <a href="/Competitions">Competitions</a>
-                                            <a href="/Dives/">Dives</a>
-                                        </div>
-                                    </b>
-                            </div>
-                        </div>
-                      }
+              
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>
