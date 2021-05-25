@@ -5,12 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br /><br /><br />
-<div style="text-align:center"><h1>Index</h1> 
+<div style="text-align:center"><h1>Registerd Dives</h1> 
 
+@if (User.IsInRole("Diver") || User.IsInRole("Coach"))
+{
 <p><br />
-  @Html.ActionLink("Create New", "Create")
+  @Html.ActionLink("Register a new Dive", "Create")
 </p>
-
+}
 <table class="table">
     <tr>
         <th>
@@ -84,11 +86,31 @@
         @Html.DisplayFor(modelItem => item.DifficultyScore)
     </td>
     <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.DiveID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.DiveID }) |
+        @if (User.IsInRole("Admin"))
+        {
+            @Html.ActionLink("Edit", "Edit", new { id = item.DiveID })
+            <p>--</p>
+            @Html.ActionLink("Delete", "Delete", new { id = item.DiveID })
+
+        }
+        @if (User.IsInRole("Judge"))
+        {
+            <p>--</p>
+            @Html.ActionLink(
+                    linkText: "Add Score",
+                    actionName: "Create",
+                    controllerName: "Scores",
+                    routeValues: new
+                    {
+                        Dive = item.DiveID
+                    },
+                    htmlAttributes: null
+                )
+        }
+        <p>--</p>
         @Html.ActionLink(
-                linkText: "Add Score",
-                actionName: "Create",
+                linkText: "View Score",
+                actionName: "Index",
                 controllerName: "Scores",
                 routeValues: new
                 {
@@ -96,7 +118,6 @@
                 },
                 htmlAttributes: null
             )
-
     </td>
 </tr>
     }

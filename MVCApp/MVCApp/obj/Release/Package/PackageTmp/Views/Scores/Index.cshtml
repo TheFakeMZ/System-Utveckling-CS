@@ -2,14 +2,11 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<br /> <br /> <br /> 
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -24,23 +21,54 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Judge)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Score1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dive1.Diver)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ScoreID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ScoreID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ScoreID })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Judge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dive1.Diver)
+            </td>
+            <td>
+                @if (User.IsInRole("Judge") || User.IsInRole("Coach"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ScoreID }) 
+                    <p>_____</p>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ScoreID })
+                }
+            </td>
+        </tr>
+    }
 </table>
+
+<br />
+<br />
+
+<div style="text-align:center">
+    <h2><b> <p>The total score for the dive is: </p>@String.Format("{0:0.00}", ((Model.Sum(i => i.Score1) - (Model.Max(i => i.Score1) + Model.Min(i => i.Score1))) / 3))</b> </h2>
+    <br /> <br />
+    <br /><br />
+    <h3>Calculation Process: </h3>
+    <br />
+    <td><b>Total Sum = </b></td>
+    <td>@Model.Sum(i => i.Score1)</td><br />
+    <td><b>Max + Min = </b></td>
+    <td>@(Model.Max(i => i.Score1) +  Model.Min(i => i.Score1))</td> <br />
+    <td><b>Max + Min - Sum = </b></td>
+    <td>@(Model.Sum(i => i.Score1) - (Model.Max(i => i.Score1) +  Model.Min(i => i.Score1)))</td>
+    <br />
+    <td><b>Average of Sum - (Max + Min) = </b></td>
+    <td>@((Model.Sum(i => i.Score1) - (Model.Max(i => i.Score1) +  Model.Min(i => i.Score1)))/3)</td>
+    <br />
+    <td><b>Rounded = </b></td>
+    @String.Format("{0:0.00}", ((Model.Sum(i => i.Score1) - (Model.Max(i => i.Score1) + Model.Min(i => i.Score1))) / 3))
+
+    <br />
+    <div>
+    </div>
+
+    <br />   <br />   <br />   <br />

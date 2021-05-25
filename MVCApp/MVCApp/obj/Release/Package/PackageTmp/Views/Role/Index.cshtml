@@ -33,18 +33,21 @@
                 Role Name
             </th>
         <tr>
-            @foreach (var item in Model)
-            {
-            <tr>
-                <td class="c">
-                    @item.Name
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Name }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Name }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Name })
-                </td>
+                @foreach (var item in Model)
+                {
+<tr>
+    <td class="c">
+
+        @item.Name
+        @if (User.IsInRole("RootAdmin"))
+        {
+            @Html.ActionLink("Delete", "Delete", new { id = item.Name })
+        }
+        </td>
             </tr>
         }
 
+        
         </table>
 
         <br />

@@ -49,8 +49,11 @@
                         <div class="form-group">
                             <div class="col-md-offset-0 col-md-12">
                                 <button class="btn" type="submit">Log in</button>
-                                <p class="account">Don't have an account? <a href="Register">@Html.ActionLink("Register", "Register")</a></p>
-                            </div>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <p class="account">Don't have an account? <a href="Register">@Html.ActionLink("Register", "Register")</a></p>
+                                }
+                                </div>
                         </div>
                     }
                 </div>

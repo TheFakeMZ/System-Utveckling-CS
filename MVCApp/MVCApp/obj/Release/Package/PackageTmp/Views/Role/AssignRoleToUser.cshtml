@@ -6,14 +6,15 @@
 
 <h2>AssignRoleToUser</h2>
 
-@using (Html.BeginForm())
-{ 
-    <div class="form-group">
-        @Html.Label("Select Your User Type", new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.DropDownList("UserName")
+using (Html.BeginForm())
+{
+    <div style="text-align:center">
+        <div class="form-group">
+            @Html.Label("Select Your User Type", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownList("UserName")
+            </div>
         </div>
-    </div>
-    <input type="submit" value="Create Role" /> 
-}
+        <input type="submit" value="Create Role" />
+     }
 
