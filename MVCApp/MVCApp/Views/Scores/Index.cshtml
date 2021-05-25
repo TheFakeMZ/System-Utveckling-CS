@@ -5,11 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<br /> <br /> <br /> 
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -37,9 +34,12 @@
                 @Html.DisplayFor(modelItem => item.Dive1.Diver)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ScoreID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ScoreID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ScoreID })
+                @if (User.IsInRole("Judge") || User.IsInRole("Coach"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ScoreID }) 
+                    <p>_____</p>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ScoreID })
+                }
             </td>
         </tr>
     }
@@ -54,17 +54,17 @@
     <br /><br />
     <h3>Calculation Process: </h3>
     <br />
-    <td>Sum</td>
+    <td><b>Total Sum = </b></td>
     <td>@Model.Sum(i => i.Score1)</td><br />
-    <td>Max + Min</td>
+    <td><b>Max + Min = </b></td>
     <td>@(Model.Max(i => i.Score1) +  Model.Min(i => i.Score1))</td> <br />
-    <td>Max + Min - Sum</td>
+    <td><b>Max + Min - Sum = </b></td>
     <td>@(Model.Sum(i => i.Score1) - (Model.Max(i => i.Score1) +  Model.Min(i => i.Score1)))</td>
     <br />
-    <td>Average of Max + Min - Sum </td>
+    <td><b>Average of Sum - (Max + Min) = </b></td>
     <td>@((Model.Sum(i => i.Score1) - (Model.Max(i => i.Score1) +  Model.Min(i => i.Score1)))/3)</td>
     <br />
-    <td>Rounded</td>
+    <td><b>Rounded = </b></td>
     @String.Format("{0:0.00}", ((Model.Sum(i => i.Score1) - (Model.Max(i => i.Score1) + Model.Min(i => i.Score1))) / 3))
 
     <br />

@@ -414,6 +414,7 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Competitions\Index.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
